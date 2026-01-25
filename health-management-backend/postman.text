@@ -1,0 +1,58 @@
+git add .
+git commit -m "Initial backend setup for healthcare application"
+git remote add origin https://github.com/varun123936/HealthCare.git 
+git push -u origin master
+
+
+/register
+{
+  "username": "doctor1",
+  "password": "doc123",
+  "role": "DOCTOR"
+}
+
+{
+  "username": "patient1",
+  "password": "pat123",
+  "role": "PATIENT"
+}
+
+/login
+{
+  "username": "doctor1",
+  "password": "doc123"
+}
+
+{
+  "username": "patient1",
+  "password": "pat123"
+}
+
+api/doctors/profile
+{
+  "name": "Dr. Suresh",
+  "specialization": "Cardiology",
+  "experience": 10,
+  "availableFrom": "10:00",
+  "availableTo": "16:00"
+}
+
+Patient Books Appointment
+POST /api/appointments
+Authorization: Bearer <patient-token>
+
+{
+  "doctorId": 1,
+  "appointmentDate": "2025-01-20T10:00:00"
+}
+
+2️⃣ Doctor Views Appointments
+GET /api/appointments/doctor
+Authorization: Bearer <doctor-token>
+
+3️⃣ Patient Views Appointments
+GET /api/appointments/patient
+Authorization: Bearer <patient-token>
+
+HOW TO TEST MODULE 5 (END-TO-END) - ChatGpt
+
